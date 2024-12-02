@@ -1,16 +1,11 @@
 import { SafeAreaView, SafeAreaProvider } from "react-native-safe-area-context";
-import { Profil } from "./components/Profil/Profil";
+import { AgeCounter } from "./components/AgeCounter/AgeCounter";
 
 export default function App() {
   return (
     <SafeAreaProvider>
       <SafeAreaView style={{ flex: 1, justifyContent: "center", padding: 20 }}>
-        <Profil
-          firstName="Long"
-          lastName="Nguyen"
-          age={100}
-          isOpenToWork={true}
-        />
+        <AgeCounter />
       </SafeAreaView>
     </SafeAreaProvider>
   );
