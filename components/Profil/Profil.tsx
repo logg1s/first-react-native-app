@@ -6,9 +6,11 @@ import { ReactElement } from "react";
 export function Profil({
   firstName,
   lastName,
+  children,
 }: {
   firstName: string;
   lastName: string;
+  children: ReactElement;
 }) {
   return (
     <View style={profilStyle.container}>
@@ -25,6 +27,7 @@ export function Profil({
           </Text>
           <Text style={{ fontSize: 16 }}>
             Glad to see you. Grow up my skill with React Native and TypeScript.
+            {children}
           </Text>
         </View>
       </View>

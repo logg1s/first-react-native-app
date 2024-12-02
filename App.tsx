@@ -5,9 +5,11 @@ import { Text } from "react-native";
 export default function App() {
   return (
     <SafeAreaProvider>
-      <SafeAreaView
-        style={{ flex: 1, justifyContent: "center", padding: 20 }}
-      ></SafeAreaView>
+      <SafeAreaView style={{ flex: 1, justifyContent: "center", padding: 20 }}>
+        <Profil firstName="Long" lastName="Nguyen">
+          <Text>12312 12312321321</Text>
+        </Profil>
+      </SafeAreaView>
     </SafeAreaProvider>
   );
 }
