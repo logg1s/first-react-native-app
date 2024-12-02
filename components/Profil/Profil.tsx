@@ -2,15 +2,16 @@ import { Image, Text, TouchableOpacity, View } from "react-native";
 import { profilStyle } from "./Profil.style";
 import FontAwesome from "@expo/vector-icons/FontAwesome";
 import AntDesign from "@expo/vector-icons/AntDesign";
-import { ReactElement } from "react";
 export function Profil({
   firstName,
   lastName,
-  children,
+  age,
+  isOpenToWork,
 }: {
   firstName: string;
   lastName: string;
-  children: ReactElement;
+  age: number;
+  isOpenToWork: boolean;
 }) {
   return (
     <View style={profilStyle.container}>
@@ -26,8 +27,18 @@ export function Profil({
             Hi {firstName} {lastName} !
           </Text>
           <Text style={{ fontSize: 16 }}>
-            Glad to see you. Grow up my skill with React Native and TypeScript.
-            {children}
+            I'm {age} years old. Glad to see you. Grow up my skill with React
+            Native and TypeScript.
+          </Text>
+          <Text
+            style={{
+              backgroundColor: isOpenToWork ? "green" : "red",
+              fontSize: 16,
+              fontWeight: "600",
+              color: "white",
+            }}
+          >
+            {isOpenToWork ? "I'm looking for a job" : "Not looking to a job"}
           </Text>
         </View>
       </View>
