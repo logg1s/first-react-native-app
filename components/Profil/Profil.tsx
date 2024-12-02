@@ -2,7 +2,6 @@ import { Image, Text, TouchableOpacity, View } from "react-native";
 import { profilStyle } from "./Profil.style";
 import FontAwesome from "@expo/vector-icons/FontAwesome";
 import AntDesign from "@expo/vector-icons/AntDesign";
-import { socialMediaLink } from "../../App";
 export function Profil({
   firstName,
   lastName,
@@ -50,34 +49,19 @@ export function Profil({
         </View>
       </View>
       <View style={profilStyle.social}>
-        <TouchableOpacity
-          style={profilStyle.social__btn}
-          onPress={() => onPressSocialMediaIcon(socialMediaLink.twitter)}
-        >
+        <TouchableOpacity style={profilStyle.social__btn}>
           <AntDesign name="twitter" size={24} color="#1DA1F2" />
         </TouchableOpacity>
-        <TouchableOpacity
-          style={profilStyle.social__btn}
-          onPress={() => onPressSocialMediaIcon(socialMediaLink.linkedin)}
-        >
+        <TouchableOpacity style={profilStyle.social__btn}>
           <AntDesign name="linkedin-square" size={24} color="#0A66C2" />
         </TouchableOpacity>
-        <TouchableOpacity
-          style={profilStyle.social__btn}
-          onPress={() => onPressSocialMediaIcon(socialMediaLink.facebook)}
-        >
+        <TouchableOpacity style={profilStyle.social__btn}>
           <FontAwesome name="facebook-square" size={24} color="#1877F2" />
         </TouchableOpacity>
-        <TouchableOpacity
-          style={profilStyle.social__btn}
-          onPress={() => onPressSocialMediaIcon(socialMediaLink.instagram)}
-        >
+        <TouchableOpacity style={profilStyle.social__btn}>
           <FontAwesome name="instagram" size={24} color="#E4405F" />
         </TouchableOpacity>
-        <TouchableOpacity
-          style={profilStyle.social__btn}
-          onPress={() => onPressSocialMediaIcon(socialMediaLink.github)}
-        >
+        <TouchableOpacity style={profilStyle.social__btn}>
           <FontAwesome name="github" size={24} color="#181717" />
         </TouchableOpacity>
       </View>
