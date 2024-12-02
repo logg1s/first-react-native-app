@@ -2,7 +2,14 @@ import { Image, Text, TouchableOpacity, View } from "react-native";
 import { profilStyle } from "./Profil.style";
 import FontAwesome from "@expo/vector-icons/FontAwesome";
 import AntDesign from "@expo/vector-icons/AntDesign";
-export function Profil() {
+import { ReactElement } from "react";
+export function Profil({
+  firstName,
+  lastName,
+}: {
+  firstName: string;
+  lastName: string;
+}) {
   return (
     <View style={profilStyle.container}>
       <View style={profilStyle.header}>
@@ -13,9 +20,11 @@ export function Profil() {
           />
         </View>
         <View style={profilStyle.texts}>
-          <Text style={{ fontSize: 26, fontWeight: "600" }}>Hi the DEV !</Text>
+          <Text style={{ fontSize: 26, fontWeight: "600" }}>
+            Hi {firstName} {lastName} !
+          </Text>
           <Text style={{ fontSize: 16 }}>
-            Glad to see you. Grow up my skill with React Native and TypeScript
+            Glad to see you. Grow up my skill with React Native and TypeScript.
           </Text>
         </View>
       </View>
