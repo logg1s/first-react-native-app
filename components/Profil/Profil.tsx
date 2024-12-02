@@ -7,11 +7,13 @@ export function Profil({
   lastName,
   age,
   isOpenToWork,
+  onClickTitle,
 }: {
   firstName: string;
   lastName: string;
   age: number;
   isOpenToWork: boolean;
+  onClickTitle: () => void;
 }) {
   return (
     <View style={profilStyle.container}>
@@ -23,9 +25,11 @@ export function Profil({
           />
         </View>
         <View style={profilStyle.texts}>
-          <Text style={{ fontSize: 26, fontWeight: "600" }}>
-            Hi {firstName} {lastName} !
-          </Text>
+          <TouchableOpacity onPress={onClickTitle}>
+            <Text style={{ fontSize: 26, fontWeight: "600" }}>
+              Hi {firstName} {lastName} !
+            </Text>
+          </TouchableOpacity>
           <Text style={{ fontSize: 16 }}>
             I'm {age} years old. Glad to see you. Grow up my skill with React
             Native and TypeScript.
